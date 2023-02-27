@@ -22,4 +22,24 @@
     <string name="close_button">
         Mantap!
     </string>
+    <string name="details_desc">
+        Honda PCX160 kini pakai mesin 156,9 cc
+        4 katup dengan teknologi anyar eSP+.
+        Outputnya paling besar di antara para
+        kompetitor yakni punya tenaga
+        maksimal 15,8 daya kuda pada 8.500
+        rpm dan torsi puncak 14,7 Nm di 6.500
+        rpm.
+        \n\n
+        Berdasarkan pengetesan internal
+        pabrikan lewat metode ECE R40 Euro 3
+        dengan pengaturan Idling Stop System
+        aktif tercatat 45 kilometer per liter.
+        \n\n
+        Soal angkut barang bawaan Honda
+        PCX160 punya kelebihan di sektor ini,
+        bagasi utama dengan volume 30 liter
+        mampu menampung 1 buah helm
+        fullface.
+    </string>
 </resources>
