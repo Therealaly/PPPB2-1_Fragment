@@ -1,6 +1,7 @@
 package com.example.fragment_app;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -37,20 +38,25 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         DetailsFragment detailsFragment = new DetailsFragment();
+        MainFragment mainFragment = new MainFragment();
 
-        fragmentTransaction.add(R.id.fragment_frame, detailsFragment).addToBackStack(null).commit();
+        fragmentTransaction.replace(R.id.fragment_frame, detailsFragment).addToBackStack(null).commit();
+        //fragmentTransaction.remove(mainFragment).commit();
 
         isFragmentDisplayed = true;
+
         mButton.setText(R.string.close_button);
     }
 
     public void closeFragment(){
         FragmentManager fragmentManager = getSupportFragmentManager();
-        DetailsFragment detailsFragment = (DetailsFragment) fragmentManager.findFragmentById(R.id.fragment_frame);
+        Fragment detailsFragment = fragmentManager.findFragmentById(R.id.fragment_frame);
+        MainFragment mainFragment = new MainFragment();
 
         if(detailsFragment != null) {
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.remove(detailsFragment).commit();
+            fragmentTransaction.replace(R.id.fragment_frame, mainFragment).addToBackStack(null).commit();
+            //fragmentTransaction.replace(R.id.fragment_frame, mainFragment).addToBackStack(null).commit();
         }
 
         mButton.setText(R.string.default_button);
